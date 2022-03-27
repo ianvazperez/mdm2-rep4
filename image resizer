@@ -1,6 +1,6 @@
 from PIL import Image
 import numpy
-im = Image.open('/Users/TobyCheng/Desktop/test3.jpg')
+im = Image.open('test.jpg')
 
 iterations = 10
 adjustment = 50
