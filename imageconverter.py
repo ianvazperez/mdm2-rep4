@@ -13,7 +13,7 @@ def getFrame(sec):
 
 sec = 0
 
-frameRate = 1
+frameRate = 0.5
 
 count=1
 

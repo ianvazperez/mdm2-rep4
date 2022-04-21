@@ -91,7 +91,7 @@ def minimum_seam(img):
 
 def main():
     if len(sys.argv) != 5:
-        print('usage: carver.py <r/c> <scale> <image_in> <image_out>', file=sys.stderr)
+        print('Usage: new_image_resizer.py <r/c> <scale> <image_in> <image_out>', file=sys.stderr)
         sys.exit(1)
 
     which_axis = sys.argv[1]
@@ -106,7 +106,7 @@ def main():
     elif which_axis == 'c':
         out = crop_c(img, scale)
     else:
-        print('usage: carver.py <r/c> <scale> <image_in> <image_out>', file=sys.stderr)
+        print('Usage: new_image_resizer.py <r/c> <scale> <image_in> <image_out>', file=sys.stderr)
         sys.exit(1)
     
     imwrite(out_filename, out)
