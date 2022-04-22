@@ -1,5 +1,6 @@
 import cv2
 import os
+import moviepy.editor as mp
 
 vidcap = cv2.VideoCapture('video.mp4')
 directory = r'C:/Users/ianva/OneDrive/mdm2-rep4/images/'
@@ -12,11 +13,8 @@ def getFrame(sec):
     return hasFrames
 
 sec = 0
-
-frameRate = 0.5
-
+frameRate = 0.2
 count=1
-
 success = getFrame(sec)
 
 while success:
