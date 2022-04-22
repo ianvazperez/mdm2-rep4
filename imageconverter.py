@@ -13,7 +13,7 @@ def getFrame(sec):
     return hasFrames
 
 sec = 0
-frameRate = 0.2
+frameRate = 0.1
 count=1
 success = getFrame(sec)
 

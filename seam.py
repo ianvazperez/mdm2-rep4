@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-#Usage: python seam.py <r/c> <scale> <image_in> <image_out>
-
 import sys
 import numba
 from tqdm import trange
@@ -102,7 +99,7 @@ def main(i):
     elif which_axis == 'c':
         out = crop_c(img, scale)
     else:
-        print('usage: seam.py <r/c> <scale> <image_in> <image_out>')
+        print('Choose between r/c')
     
     imwrite(out_filename, out)
 
