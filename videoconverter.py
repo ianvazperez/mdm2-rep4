@@ -6,7 +6,7 @@ clips = []
 img_number=1
 
 for img_number in range(1,204): 
-    clip =  ImageClip(directory + 'image ' + str(img_number) + '.jpg').set_duration(0.1)
+    clip =  ImageClip(directory + 'cropped ' + str(img_number) + '.jpg').set_duration(0.1)
     clips.append(clip)
 
 
