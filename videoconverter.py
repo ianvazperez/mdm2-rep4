@@ -14,7 +14,7 @@ video_clip = concatenate_videoclips(clips, method='compose')
 video_clip.write_videofile("cropped-video(1504).mp4", fps=24, remove_temp=True, codec="libx264", audio_codec="aac")
 
 os.chdir(r'C:/Users/ianva/Documents/GitHub/mdm2-rep4/')
-original_video = VideoFileClip(r"video.mp4")
+original_video = VideoFileClip(r"Top Gun.mp4")
 original_video.audio.write_audiofile(r"audio.mp3")
 
 audio_clip = AudioFileClip("audio.mp3")
