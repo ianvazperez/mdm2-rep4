@@ -103,5 +103,5 @@ def main(i):
     
     imwrite(out_filename, out)
 
-for i in range(1,103):
+for i in range(1,1505):
     main(i)

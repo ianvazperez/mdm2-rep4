@@ -2,8 +2,8 @@ import cv2
 import os
 import moviepy.editor as mp
 
-vidcap = cv2.VideoCapture('video.mp4')
-directory = r'C:/Users/ianva/OneDrive/mdm2-rep4/images/'
+vidcap = cv2.VideoCapture('Top Gun.mp4')
+directory = r'C:/Users/ianva/Documents/GitHub/mdm2-rep4/images/'
 def getFrame(sec):
     vidcap.set(cv2.CAP_PROP_POS_MSEC,sec*1000)
     hasFrames,image = vidcap.read()
