@@ -5,7 +5,6 @@ import numpy as np
 from imageio import imread, imwrite
 from scipy.ndimage.filters import convolve
 
-
 def calc_energy(img):
     filter_du = np.array([
         [1.0, 2.0, 1.0],
@@ -37,11 +36,6 @@ def crop_c(img, scale_c):
 
     return img
 
-def crop_r(img, scale_r):
-    img = np.rot90(img, 1, (0, 1))
-    img = crop_c(img, scale_r)
-    img = np.rot90(img, 3, (0, 1))
-    return img
 
 @numba.jit
 def carve_column(img):
@@ -85,23 +79,13 @@ def minimum_seam(img):
 
 
 def main(i):
-
-    which_axis = 'c'
     scale = 0.75
     
-    in_filename = 'image ' + str(i) + '.jpg'
-    out_filename = 'cropped ' + str(i) + '.jpg'
-
+    in_filename = 'test4.jpg'
+    out_filename = 'cropped-test4.jpg'
     img = imread(in_filename)
-
-    if which_axis == 'r':
-        out = crop_r(img, scale)
-    elif which_axis == 'c':
-        out = crop_c(img, scale)
-    else:
-        print('Choose between r/c')
-    
+    out = crop_c(img, scale)
     imwrite(out_filename, out)
 
-for i in range(1,1505):
+for i in range(1):
     main(i)
